@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Countdown Convention 2026</title>
+    <!-- Lien vers la feuille de style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Préchargement et ajout des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Montserrat + Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Vidéo en arrière-plan -->
+    <video autoplay loop muted playsinline id="bgVideo">
+        <source src="vidéos/France_Paris.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+
+    <!-- Overlay pour assombrir la vidéo -->
+    <div class="overlay"></div>
+
+    <main>
+        <!-- Logo avec alt pour accessibilité -->
+        <img src="images/logo_LWM.png" alt="Logo de la Convention" class="logo">
+
+        <h1 id="event-title">
+            <span class="highlight">LA GRANDE CONVENTION INTERNATIONALE</span> DE LA DIASPORA LIFE WORD MISSION 2026<br>
+            DÉBUTERA DANS :
+        </h1>
+
+        <!-- Aria-labelledby pour relier le titre au countdown -->
+        <div class="countdown-container" aria-labelledby="event-title">
+            <div class="time-box" aria-label="Mois restants">
+                <span class="value" id="months">--</span>
+                <span class="label">Mois</span>
+            </div>
+            <div class="time-box" aria-label="Jours restants">
+                <span class="value" id="days">--</span>
+                <span class="label">Jours</span>
+            </div>
+            <div class="time-box" aria-label="Heures restantes">
+                <span class="value" id="hours">--</span>
+                <span class="label">Heures</span>
+            </div>
+            <div class="time-box" aria-label="Minutes restantes">
+                <span class="value" id="minutes">--</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="time-box" aria-label="Secondes restantes">
+                <span class="value" id="seconds">--</span>
+                <span class="label">Secondes</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
